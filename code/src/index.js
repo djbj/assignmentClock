@@ -25,12 +25,19 @@ class Clock extends React.Component {
     })
   }
 
+  pauseClock = () => {
+    clearInterval(this.timerID)
+  }
+
   render() {
     return (
       <div>
         <h1>Hello, world!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        {/* <button onClick= tick>Start</button> */}
+        <button onClick={this.pauseClock}>Pause</button>
       </div>
+
     )
   }
 
