@@ -40,9 +40,11 @@ class Clock extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        <button onClick={this.startClock}>Start</button>
-        <button onClick={this.pauseClock}>Pause</button>
+        <h2>It is</h2>
+        <h2 className="display">{this.state.date.toLocaleTimeString()}.</h2>
+        <button onClick={this.startClock}>START</button>
+        {/* <br/> */}
+        <button onClick={this.pauseClock}>PAUSE</button>
       </div>
 
     )
